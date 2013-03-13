@@ -44,6 +44,8 @@ namespace Hotel.Controllers
             return View();
         }
 
+
+
         //
         // POST: /QuartoCRUD/Create
 
