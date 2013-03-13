@@ -1,0 +1,29 @@
+﻿@model Hotel.Models.poco.StatusQuarto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>StatusQuarto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StDescridao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StDescridao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StFlAlugavel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StFlAlugavel)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model Hotel.Models.poco.Checkin
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Checkin</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChData)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChData)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChPrevisao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChPrevisao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChSaida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChSaida)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChValor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChValor)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,43 @@
+﻿@model Hotel.Models.poco.Checkin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Checkin</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChData)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChData)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChPrevisao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChPrevisao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChSaida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChSaida)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChValor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChValor)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ChId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

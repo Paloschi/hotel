@@ -1,0 +1,36 @@
+﻿@model Hotel.Models.poco.Cidade
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cidade</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CidDescricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CidDescricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CidEstado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CidEstado)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CidEstadoAb)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CidEstadoAb)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CidId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

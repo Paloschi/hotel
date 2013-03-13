@@ -1,0 +1,109 @@
+﻿@model Hotel.Models.poco.Cliente
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Cliente</legend>
+
+        @Html.HiddenFor(model => model.CliId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliNome)
+            @Html.ValidationMessageFor(model => model.CliNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliTelefone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliTelefone)
+            @Html.ValidationMessageFor(model => model.CliTelefone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliCpf)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliCpf)
+            @Html.ValidationMessageFor(model => model.CliCpf)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliRg)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliRg)
+            @Html.ValidationMessageFor(model => model.CliRg)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliDtRegistro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliDtRegistro)
+            @Html.ValidationMessageFor(model => model.CliDtRegistro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliDtNascimento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliDtNascimento)
+            @Html.ValidationMessageFor(model => model.CliDtNascimento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliSexo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliSexo)
+            @Html.ValidationMessageFor(model => model.CliSexo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliEmail)
+            @Html.ValidationMessageFor(model => model.CliEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliEndereco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliEndereco)
+            @Html.ValidationMessageFor(model => model.CliEndereco)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CliBairro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CliBairro)
+            @Html.ValidationMessageFor(model => model.CliBairro)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

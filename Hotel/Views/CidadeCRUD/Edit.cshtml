@@ -1,0 +1,53 @@
+﻿@model Hotel.Models.poco.Cidade
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Cidade</legend>
+
+        @Html.HiddenFor(model => model.CidId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CidDescricao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CidDescricao)
+            @Html.ValidationMessageFor(model => model.CidDescricao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CidEstado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CidEstado)
+            @Html.ValidationMessageFor(model => model.CidEstado)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CidEstadoAb)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CidEstadoAb)
+            @Html.ValidationMessageFor(model => model.CidEstadoAb)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

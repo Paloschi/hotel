@@ -1,0 +1,36 @@
+﻿@model Hotel.Models.poco.Quarto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Quarto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarNumero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarNumero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarDescricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarDescricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarValorDia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarValorDia)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.QuarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

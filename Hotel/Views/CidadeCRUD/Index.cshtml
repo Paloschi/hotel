@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Hotel.Models.poco.Cidade>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CidDescricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CidEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CidEstadoAb)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CidDescricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CidEstado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CidEstadoAb)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CidId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CidId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CidId })
+        </td>
+    </tr>
+}
+
+</table>

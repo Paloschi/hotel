@@ -1,0 +1,123 @@
+﻿@model Hotel.Models.poco.Funcionario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Funcionario</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunNome)
+            @Html.ValidationMessageFor(model => model.FunNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunTelefone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunTelefone)
+            @Html.ValidationMessageFor(model => model.FunTelefone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunCpf)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunCpf)
+            @Html.ValidationMessageFor(model => model.FunCpf)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunRg)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunRg)
+            @Html.ValidationMessageFor(model => model.FunRg)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunDtRegistro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunDtRegistro)
+            @Html.ValidationMessageFor(model => model.FunDtRegistro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunDtNascimento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunDtNascimento)
+            @Html.ValidationMessageFor(model => model.FunDtNascimento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunSexo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunSexo)
+            @Html.ValidationMessageFor(model => model.FunSexo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunEmail)
+            @Html.ValidationMessageFor(model => model.FunEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunEndereco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunEndereco)
+            @Html.ValidationMessageFor(model => model.FunEndereco)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunBairro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunBairro)
+            @Html.ValidationMessageFor(model => model.FunBairro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunLogin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunLogin)
+            @Html.ValidationMessageFor(model => model.FunLogin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FunSenha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FunSenha)
+            @Html.ValidationMessageFor(model => model.FunSenha)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

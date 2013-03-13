@@ -1,0 +1,99 @@
+﻿@model Hotel.Models.poco.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Funcionario</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunNome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunNome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunTelefone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunTelefone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunCpf)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunCpf)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunRg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunRg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunDtRegistro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunDtRegistro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunDtNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunDtNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunSexo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunSexo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunEndereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunEndereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunBairro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunBairro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunLogin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunLogin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FunSenha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FunSenha)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.FunId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,88 @@
+﻿@model Hotel.Models.poco.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Cliente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliNome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliNome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliTelefone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliTelefone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliCpf)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliCpf)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliRg)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliRg)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliDtRegistro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliDtRegistro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliDtNascimento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliDtNascimento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliSexo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliSexo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliEndereco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliEndereco)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CliBairro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CliBairro)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

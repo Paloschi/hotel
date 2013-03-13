@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Hotel.Models.poco.Funcionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FunNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunTelefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunCpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunRg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunDtRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunDtNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunSexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunBairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunLogin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FunSenha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunTelefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunCpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunRg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunDtRegistro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunDtNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunSexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunBairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunLogin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FunSenha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FunId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FunId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FunId })
+        </td>
+    </tr>
+}
+
+</table>

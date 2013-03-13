@@ -1,0 +1,39 @@
+﻿@model Hotel.Models.poco.Quarto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Quarto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarNumero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarNumero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarDescricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarDescricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuarValorDia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuarValorDia)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
